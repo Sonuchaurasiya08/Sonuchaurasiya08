@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing</title>
+    <!-- <link rel="stylesheet" href="Login.css"> -->
+    <!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    background-color: #f2f2f2;
+}
+.container{
+    background-color: white;
+    width: 500px;
+    padding: 25px;
+    margin: 50px auto 0;
+    border-top: 5px solid pink;
+    box-shadow: 0 0 5px rgba(0,0, 0, 0,5);
+}
+.container h2{
+    font-size: 24px;
+    line-height: 24px;
+    padding:30px;
+    text-align: center;
+
+}
+.input-Name{
+    width:90%;
+    position: relative;
+    margin: 20px auto;
+}
+.Lock{
+    padding: 8px 11px;
+
+}
+.name{
+    width: 45%;
+    padding: 8px 0 8px 40px;
+
+}
+.input-name span{
+    margin-left: 35px;
+}
+.text-name{
+    width: 100%;
+    padding: 8px 0 8px 40px;
+}
+.input-Name i{
+    position: absolute;
+    font-size: 18px;
+    color: pink;
+    border-right: 1px solid #cccccc;
+}
+.Email{
+    padding: 8px;
+    border-right: 1px solid #cccccc ;
+    font-size: 18px;
+}
+.text-name, .name{
+    border: 1px solid #cccccc;
+    outline: none;
+    
+    /* -webkit-transition: all 0.30s ease-in-out; 
+    -moz-transition: all 0.30s ease-in-out; 
+    -ms-transition: all 0.30s ease-in-out; 
+    -webkit-transition: all 0.30s ease-in-out;  */
+}
+.text-name:hover, .name:hover{
+    background-color: #cccccc;
+
+}
+.text-name:focus, .name:focus{
+    border: 1px solid blue;
+
+}
+.radio-button{
+    margin-right: 4px;
+
+
+}
+.State{
+    display: inline-block;
+    width: 100%;
+    height:35px;
+    padding: 0px 10px;
+    cursor: pointer;
+    border: 1px solid #cccccc;
+    background: white;
+}
+.State::ms-expand{
+    display: none;
+}
+.State:hover, .State:focus{
+    color:blue;
+    background: #fafafa; 
+    border-color: blue; 
+    outline: none;
+    
+}
+.arrow{
+    position: absolute;
+    top:calc(50% - 4px);
+    right: 15px;
+    width:0;
+    height:0;
+    pointer-events: none;
+    border: width 8px 5px 0px 5px;
+    border-style: solid;
+    border-color: #7b7b7b transparent transparent transparent;
+   
+    
+
+}
+.State:hover + .arrow, .State:focus +arrow{
+    border-top-color:blue;
+}
+.check{
+    margin-right: 15px;
+    position: relative;
+    margin-left: 25px
+
+}
+.check::before{
+    content:"";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin-right: 8px;
+    vertical-align: -2px;
+    border: 2px solid #cccccc;
+    padding:2.5px ;
+    background-color: transparent;
+    background-clip: content-box;
+    transition: all 0.2s ease;
+}
+.check::after{
+    border-right: 2px solid red;
+    border-top: 2px solid red;
+    content: "";
+    height: 20px;
+    left: 2px;
+    position: absolute;
+    top: 7px;
+    transform: scaleX(-1) rotate(135deg);
+    transform-origin:left top;
+    width: 7px;
+    display: none;
+}
+.check-button{
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+.check-button:hover +.check::before{
+    border-color: pink;
+}
+.check-button:checked +.check::before{
+    border-color: chartreuse ;
+}
+.check-button:checked +.check::after{
+    -moz-animation: check 0.8 ease 0s running;
+    -webkit-animation: check 0.8 ease 0s running;
+    animation: check 0.8s ease 0s running;
+    display: block;
+    width: 7px;
+    height: 20px;
+    border-color: chartreuse;
+
+
+}
+/* @-webkit-keyframes check{
+    0%{height: 0; width:0;}
+    25%{height: 0; width: 7px;}
+    50%{height: 20px; width: 7px;}
+} */
+.button{
+    background-color: pink;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin-bottom: 10px;
+   
+}
+.button:hover{
+    background-color: chartreuse;
+}.social{
+	display: flex;
+}
+.social a{
+	width: 30px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background:  #f9004d;
+	border-radius: 50%;
+	margin: 22px 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+}
+.social a:hover{
+	transform: scale(1.3);
+	transition: .3s;
+}
+.end{
+	position: absolute;
+	color:blue;
+	bottom: 5px;
+	font-size: 8px; 
+}
+
+
+
+  </style>
+</head>
+</head>
+<body>
+    <div class="container">
+        <h2>Login Form</h2>
+        <div class="form-container"></div>
+        <form action="Login.php" method="post"name="myform" onsubmit="return validate();">
+            <div class="input-Name"class="text-name">
+                <i class="fa fa-user Lock"></i>
+                <input type="text" placeholder="Users Name" class="text-name" name="Username">   
+            </div>
+
+            <div class="input-Name">
+                <i class="fa fa-unlock-alt Lock"></i>
+                <input type="text" placeholder="Password" class="text-name" name="pwd">
+            </div>
+
+            <div class="input-Name">
+                <i class="fa fa-unlock-alt Lock"></i>
+                <input type="text" placeholder="Confirm Password" class="text-name" name="cpwd">
+            </div>
+
+             <div class="input-name">
+                <input type="checkbox"  id="cb" class="check-button">
+                <label for="cb" class="check">I Accept the terms and conditions</label>
+             </div>
+
+             <div class="input-Name">
+                <input type="submit" class="button" value="Login">
+             </div>
+        </form>
+
+    </div>
+    <script>
+        function validate() {
+            let fname = document.forms["myform"]["Username"].value;
+            
+            let password = document.forms["myform"]["pwd"].value;
+            let cpass = document.forms["myform"]["cpwd"].value;
+            
+            if (fname == "") {
+                alert("Username must be filled");
+                return false;
+            }
+            
+            else if (password == "") {
+                alert("Password must be filled");
+                return false;
+            }
+            else if (password.length < 6) {
+                alert("Password should contain atleast 6 characters long");
+                return false;
+            }
+            else if (cpass == "" || cpass != password) {
+                alert("Password doesnot match, Please re-enter password");
+                return false;
+            }
+        }
+    </script>
+    
+</body>
+</html>
+    
+</body>
+</html>
